@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    "<meta charset=\"UTF-8\">\n" +
+    "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"+
+    " <style>\n" +
+                        "        body {\n" +
+                        "            margin: 0;\n" +
+                        "            font-family: Arial, sans-serif;\n" +
+                        "        }\n" +
+                        "\n" +
+                        "        .carousel-container {\n" +
+                        "            width: 80%;\n" +
+                        "            margin: 50px auto;\n" +
+                        "            overflow: hidden;\n" +
+                        "        }\n" +
+                        "\n" +
+                        "        .carousel {\n" +
+                        "            display: flex;\n" +
+                        "            transition: transform 0.5s ease-in-out;\n" +
+                        "        }\n" +
+                        "\n" +
+                        "        .carousel img {\n" +
+                        "            width: 100%;\n" +
+                        "            padding: 10px;\n" +
+                        "            border: 2px solid #ccc;\n" +
+                        "            box-sizing: border-box;\n" +
+                        "        }\n" +
+                        "\n" +
+                        "        /* Optional: Add media queries for responsiveness */\n" +
+                        "        @media (max-width: 768px) {\n" +
+                        ""}\n" +
+                        "        }\n" +
+                        "    </style>"+
+</head>
+<body>
+"<div class=\"carousel-container\">\n" +
+    "    <div class=\"carousel\" id=\"imageCarousel\">\n" +
+        "        <img src=\"https://covenantuniversity.edu.ng/images/slider/cache/2a68481ce466ea3db9ec57aba759d768/cuWEBHomepagesubsaharanAfricaTHERanking1.jpg\" alt=\"Image 1\">\n" +
+        "        <img src=\"https://covenantuniversity.edu.ng/images/slider/cache/1366088351d20c536efd896a2e817d80/PHOTO-2023-11-16-11-24-05.jpg\" alt=\"Image 2\">\n" +
+        "        <img src=\"https://covenantuniversity.edu.ng/images/slider/cache/b31d997ccd4498cdbf85fc34a9477a29/the-2022-1.jpg\" alt=\"Image 3\">\n" +
+        "    </div>\n" +
+    "</div>\n" +
+"\n" +
+"<script>\n" +
+                        "    // JavaScript for automatic sliding\n" +
+                        "    let currentIndex = 0;\n" +
+                        "    const carousel = document.getElementById('imageCarousel');\n" +
+                        "    const images = carousel.getElementsByTagName('img');\n" +
+                        "    \n" +
+                        "    function showNextImage() {\n" +
+                        "        currentIndex = (currentIndex + 1) % images.length;\n" +
+                        "        updateCarousel();\n" +
+                        "    }\n" +
+                        "\n" +
+                        "    function updateCarousel() {\n" +
+                        "        const translateValue = -currentIndex * 100 + '%';\n" +
+                        "        carousel.style.transform = 'translateX(' + translateValue + ')';\n" +
+
+                          setInterval(showNextImage, 3000); // Change image every 3 seconds\n" +
+                        "</script>"+
+"<marquee behavior=\"scroll\" direction=\"left\" scrollamount=\"5\" style=\"width: 100%;\">\n" +
+"  <!-- Insert your image here with inline styling -->\n" +
+"  <img src=\"https://covenantuniversity.edu.ng/images/2022/05/01/sdg6_-clean-water-and-sanitation---top-300.png\" alt=\"SDG 6 - Clean Water and Sanitation\" style=\"width: 100%;\">\n" +
+"</marquee>"+
+
+</body>
+</html>
